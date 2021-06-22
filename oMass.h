@@ -28,6 +28,13 @@ void randfill(int A[], int n, int min, int max)//заполнение масси
         A[i] = rand()%(max -min + 1) + min;
 }
 
+void keyfill(int A[], int n)//заполнение массива с клавиатуры A[]-передаём массив, n-длинна массива
+{
+    int i;
+    for(i = 0; i<n; i++)
+        scanf("%i", &A[i]);
+}
+
 void reverce(int A[], int n, int B[])//записть развёрнутого массива А в массив В
 {
     int i;
@@ -68,5 +75,11 @@ void sort(int A[], int n, int B[], int direction) //сортировка мас�
             B[i] = B[n - 1 - i];
             B[n - 1 - i] = t;
         }
-    
+    else
+        if(direction == 1);
+    else
+    {
+        printf("%sWRONG ENTITY%s\n", KRED, KNRM);
+        exit(0);
+    }
 }

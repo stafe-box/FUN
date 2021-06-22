@@ -28,6 +28,13 @@ void randfill(int A[], int n, int min, int max)//заполнение масси
         A[i] = rand()%(max -min + 1) + min;
 }
 
+void keyfill(int A[], int n)//заполнение массива с клавиатуры A[]-передаём массив, n-длинна массива
+{
+    int i;
+    for(i = 0; i<n; i++)
+        scanf("%i", &A[i]);
+}
+
 void reverce(int A[], int n, int B[])//записть развёрнутого массива А в массив В
 {
     int i;
@@ -74,24 +81,38 @@ void sort(int A[], int n, int B[], int direction) //сортировка мас�
     {
         printf("%sWRONG ENTITY%s\n", KRED, KNRM);
         exit(0);
-               
     }
-    
 }
 
 int main()//это для проверки функций
 {
-    int n, max, min, direction;
+    int n, max, min, direction, type;
     printf("Input list lenght here >>> ");
     scanf("%i", &n);
-    printf("Input minimum >>> ");
-    scanf("%i", &min);
-    printf("Input maximum >>> ");
-    scanf("%i", &max);
-    printf("Choose sorting direction %s1-minimum to maximum, 2-maximum to minimum%s >>> ", KRED, KNRM);
-    scanf("%i", &direction);
+    printf("Input type of filling %s[1-by keyboard, 2-random]%s >>> ", KRED, KNRM);
+    scanf("%i", &type);
     int A[n], B[n], C[n];
-    randfill(A, n, min, max);
+    if(type == 2)
+    {
+        printf("Input minimum >>> ");
+        scanf("%i", &min);
+        printf("Input maximum >>> ");
+        scanf("%i", &max);
+        randfill(A, n, min, max);
+    }
+    else
+        if(type == 1)
+        {
+            printf("Input nubers here\n↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓\n");
+            keyfill(A, n);
+        }
+    else
+    {
+        printf("%sWRONG ENTITY%s\n", KRED, KNRM);
+        exit(0);
+    }
+    printf("Choose sorting direction %s[1-increasing, 2-decreasing]%s >>> ", KRED, KNRM);
+    scanf("%i", &direction);
     reverce(A, n, B);
     sort(A, n, C, direction);
     printf("Starting list >>> ");

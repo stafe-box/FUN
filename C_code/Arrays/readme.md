@@ -11,6 +11,11 @@ KMAG - Фиолетовый
 KCYN - Синий
 KWHT - Белый
 Для объявления используется ключ %s. Пример:
-  ```c 
-  ("Input type of filling %s[1-by keyboard, 2-random]%s >>> ", KRED, KNRM);
-  ```
+```c
+printf("Input type of filling %s[1-by keyboard, 2-random]%s >>> ", KRED, KNRM);
+```
+<h4>Общие положения функций
+<h7>n - количество элементов
+A[] – исходный массив
+B[] – выходной массив
+<h4>Описание функций

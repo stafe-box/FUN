@@ -11,6 +11,6 @@ KMAG - Фиолетовый
 KCYN - Синий
 KWHT - Белый
 Для объявления используется ключ %s. Пример:
-  ```
+  ```c 
   ("Input type of filling %s[1-by keyboard, 2-random]%s >>> ", KRED, KNRM);
   ```

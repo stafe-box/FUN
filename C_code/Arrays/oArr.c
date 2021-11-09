@@ -109,7 +109,7 @@ int main()//это для проверки функций
     scanf("%i", &n);
     printf("Input type of filling %s[1-by keyboard, 2-random]%s >>> ", KRED, KNRM);
     scanf("%i", &type);
-    int A[n], B[n], C[n], D[n];
+    int A[n], B[n], C[n], D[n], E[n];
     if(type == 2)
     {
         printf("Input minimum >>> ");
